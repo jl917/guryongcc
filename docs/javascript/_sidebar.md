@@ -26,4 +26,7 @@
     * [_작성__--AJAX,FETCH](javascript/basic/17.md)
     * [_정리__--基本技巧](javascript/basic/91.md)
     * [_정리__--术语](javascript/basic/92.md)
+  - [Algorithms](javascript/algorithms/01.md)
+  - [Data Structures](javascript/structures/01.md)
+  - [Design Pattern](javascript/patten/creational/01.md)
   - [术语](javascript/term.md)
