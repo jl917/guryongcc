@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .sidebar ul li a {
+      text-decoration: none;
+    }
+
+    section.cover a {
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="app"></div>
+  <script>
+    window.$docsify = {
+      el: '#app',
+      name: 'jl917',
+      repo: '',
+      loadSidebar: true,
+      // alias: {
+      //   '/.*/_sidebar.md': '/_sidebar.md'
+      // },
+      loadNavbar: false,
+      autoHeader: true,
+      subMaxLevel: 2,
+      coverpage: true,
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied'
+      }
+      //routerMode: 'history'
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-jsx.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-tsx.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+  <script src="//unpkg.com/docsify-copy-code@2"></script>
+  <script>
+      (function () {
+        var script = document.createElement('script');
+        script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
+        script.onload = function () {
+          // When loading `web-vitals` using a classic script, all the public
+          // methods can be found on the `webVitals` global namespace.
+          webVitals.getCLS(console.log);
+          webVitals.getFID(console.log);
+          webVitals.getLCP(console.log);
+        }
+        document.head.appendChild(script);
+      }())
+  </script>
+  <script src="https://browser.sentry-cdn.com/6.9.0/bundle.min.js"
+    integrity="sha384-WO22OE751vRf/HrLRHFis3ipNR16hUk5Q0qW9ascPaSswHI9Q/0ZFMaMvJ0ZgmSI"
+    crossorigin="anonymous"></script>
+  <script src="https://browser.sentry-cdn.com/6.9.0/bundle.tracing.min.js"
+    integrity="sha384-hcwf/DOgQM7GDBzmCIi4gLXiY9grOJ4KfCT416R7jM7Xo2lpRYwVxO2fK7HIDi5n"
+    crossorigin="anonymous"></script>
+  <script>
+    Sentry.init({
+      dsn: "https://aeeefbc4cf934e31a4fd7982be37ddcc@o920355.ingest.sentry.io/5865932",
+      release: "doc.guryong.cc@1.0",
+      integrations: [new Sentry.Integrations.BrowserTracing()],
+      tracesSampleRate: 1.0,
+    });
+
+    Sentry.withScope(function (scope) {
+      scope.setTag("myTag", "send error");
+      scope.setLevel("warning");
+      // will be tagged with my-tag="my value"
+      Sentry.captureException(new Error("custom my error"));
+    });
+  </script>
+</body>
+
+</html>
