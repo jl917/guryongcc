@@ -8,4 +8,5 @@
   - [Svelte](option/07.md)
   - [Express + es6](option/08.md)
   - [Semantic-release](option/09.md)
+  - [Word](option/10.md)
   - [(페기)TS+React+Redux](option/99.md)
