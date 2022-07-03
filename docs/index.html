@@ -54,7 +54,7 @@
             var div = Docsify.dom.create('div')
             div.id = 'gitalk-container'
             var main = Docsify.dom.getNode('#main')
-            div.style = `width: ${main.clientWidth}px; margin: 0 auto 20px;`
+            div.style = `width: ${main.clientWidth}px; margin: 0 auto 20px; padding-bottom: 60px`
             Docsify.dom.appendTo(Docsify.dom.find('.content'), div)
           })
           hook.doneEach(function () {
