@@ -121,7 +121,9 @@
       title: location.href,
     })
 
-    gitalk.render('gitalk-container')
+    setTimeout(() => {
+      gitalk.render('gitalk-container')
+    }, 100)
   </script>
 </body>
 
