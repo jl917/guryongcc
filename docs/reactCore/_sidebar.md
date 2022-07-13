@@ -3,3 +3,4 @@
   - [React](reactCore/01.md)
   - [Fiber](reactCore/02.md)
   - [Reconciler](reactCore/03.md)
+  - [Update](reactCore/04.md)
