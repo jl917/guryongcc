@@ -13,4 +13,4 @@
 * [svelte](svelte/01.md)
 * [Option](option/01.md)
 * [Plugins](plugins/01.md)
-* [Interview](interview/01.md)
+* [React-core](reactCore/01.md)
