@@ -2,6 +2,7 @@
 * [css](css/houdini/00.md)
 * [javascript](javascript/performance/01.md)
 * [react](react/01.md)
+* [vue](vue/01.md)
 * [typescript](typescript/01.md)
 * [jest](jest/01.md)
 * [GIT](git/01.md)
