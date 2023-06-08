@@ -78,25 +78,25 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4XX0CNYVL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-S4XX0CNYVL');
   </script>
   <script src="//unpkg.com/docsify-copy-code@2"></script>
   <script>
-      (function () {
-        var script = document.createElement('script');
-        script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
-        script.onload = function () {
-          // When loading `web-vitals` using a classic script, all the public
-          // methods can be found on the `webVitals` global namespace.
-          webVitals.getCLS(console.log);
-          webVitals.getFID(console.log);
-          webVitals.getLCP(console.log);
-        }
-        document.head.appendChild(script);
-      }())
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
+      script.onload = function () {
+        // When loading `web-vitals` using a classic script, all the public
+        // methods can be found on the `webVitals` global namespace.
+        webVitals.getCLS(console.log);
+        webVitals.getFID(console.log);
+        webVitals.getLCP(console.log);
+      }
+      document.head.appendChild(script);
+    }())
   </script>
   <script src="https://browser.sentry-cdn.com/6.9.0/bundle.min.js"
     integrity="sha384-WO22OE751vRf/HrLRHFis3ipNR16hUk5Q0qW9ascPaSswHI9Q/0ZFMaMvJ0ZgmSI"
@@ -104,6 +104,8 @@
   <script src="https://browser.sentry-cdn.com/6.9.0/bundle.tracing.min.js"
     integrity="sha384-hcwf/DOgQM7GDBzmCIi4gLXiY9grOJ4KfCT416R7jM7Xo2lpRYwVxO2fK7HIDi5n"
     crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+
   <script>
     Sentry.init({
       dsn: "https://aeeefbc4cf934e31a4fd7982be37ddcc@o920355.ingest.sentry.io/5865932",
