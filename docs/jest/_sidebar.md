@@ -4,5 +4,5 @@
   - [testing-library](jest/03.md)
   - [测试工具](jest/04.md)
   - [测试方法](jest/05.md)
-  - [테트스방법](jest/06.md)
+  - [테스트방법](jest/06.md)
   - [vitest](jest/07.md)
