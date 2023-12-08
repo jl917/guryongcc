@@ -5,7 +5,7 @@
 * [React-core](reactCore/01.md)
 * [vue](vue/01.md)
 * [typescript](typescript/01.md)
-* [jest](jest/01.md)
+* [test](test/01.md)
 * [GIT](git/01.md)
 * [web](web/performance/01.md)
 * [http](http/basic/01.md)
