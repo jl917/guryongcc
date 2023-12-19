@@ -1,141 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-    }
-
-    .sidebar ul li a {
-      text-decoration: none;
-    }
-
-    section.cover a {
-      font-size: 30px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div id="app"></div>
-
-  <script>
-    window.$docsify = {
-      el: '#app',
-      name: 'jl917',
-      repo: 'jl917/guryongcc',
-      loadSidebar: true,
-      // alias: {
-      //   '/.*/_sidebar.md': '/_sidebar.md'
-      // },
-      loadNavbar: false,
-      autoHeader: true,
-      subMaxLevel: 2,
-      coverpage: true,
-      copyCode: {
-        buttonText: 'Copy',
-        errorText: 'Error',
-        successText: 'Copied'
-      },
-      plugins: [
-        function (hook, vm) {
-          hook.mounted(function () {
-            var div = Docsify.dom.create('div')
-            div.id = 'gitalk-container'
-            var main = Docsify.dom.getNode('#main')
-            div.style = `width: ${main.clientWidth}px; margin: 0 auto 20px; padding-bottom: 60px`
-            Docsify.dom.appendTo(Docsify.dom.find('.content'), div)
-          })
-          hook.doneEach(function () {
-            var el = document.getElementById('gitalk-container')
-            while (el.hasChildNodes()) el.removeChild(el.firstChild)
-            gitalk.render('gitalk-container')
-          })
-        }
-      ]
-      //routerMode: 'history'
-    }
-  </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-jsx.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-tsx.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-graphql.min.js"></script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S4XX0CNYVL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-S4XX0CNYVL');
-  </script>
-  <script src="//unpkg.com/docsify-copy-code@2"></script>
-  <script>
-    (function () {
-      var script = document.createElement('script');
-      script.src = 'https://unpkg.com/web-vitals/dist/web-vitals.iife.js';
-      script.onload = function () {
-        // When loading `web-vitals` using a classic script, all the public
-        // methods can be found on the `webVitals` global namespace.
-        webVitals.getCLS(console.log);
-        webVitals.getFID(console.log);
-        webVitals.getLCP(console.log);
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+    <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css" />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
       }
-      document.head.appendChild(script);
-    }())
-  </script>
-  <script src="https://browser.sentry-cdn.com/6.9.0/bundle.min.js"
-    integrity="sha384-WO22OE751vRf/HrLRHFis3ipNR16hUk5Q0qW9ascPaSswHI9Q/0ZFMaMvJ0ZgmSI"
-    crossorigin="anonymous"></script>
-  <script src="https://browser.sentry-cdn.com/6.9.0/bundle.tracing.min.js"
-    integrity="sha384-hcwf/DOgQM7GDBzmCIi4gLXiY9grOJ4KfCT416R7jM7Xo2lpRYwVxO2fK7HIDi5n"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
 
-  <script>
-    Sentry.init({
-      dsn: "https://aeeefbc4cf934e31a4fd7982be37ddcc@o920355.ingest.sentry.io/5865932",
-      release: "doc.guryong.cc@1.0",
-      integrations: [new Sentry.Integrations.BrowserTracing()],
-      tracesSampleRate: 1.0,
-    });
+      .sidebar ul li a {
+        text-decoration: none;
+      }
 
-    Sentry.withScope(function (scope) {
-      scope.setTag("myTag", "send error");
-      scope.setLevel("warning");
-      // will be tagged with my-tag="my value"
-      Sentry.captureException(new Error("custom my error"));
-    });
+      section.cover a {
+        font-size: 30px;
+      }
+    </style>
+  </head>
 
-    var gitalk = new Gitalk({
-      clientID: 'b3941da70e146af8c03b',
-      clientSecret: 'c6eb6f79207c7e3b764ef06708221a5fd415ccb1',
-      repo: 'guryongcc',
-      owner: 'jl917',
-      admin: ['jl917'],
-      // id: location.pathname,      // Ensure uniqueness and length less than 50
-      // distractionFreeMode: false,  // Facebook-like distraction free mode
-      title: location.href,
-    })
+  <body>
+    <div id="app"></div>
 
-    setTimeout(() => {
-      gitalk.render('gitalk-container')
-    }, 100)
-  </script>
-</body>
+    <script>
+      window.$docsify = {
+        el: "#app",
+        name: "jl917",
+        repo: "jl917/guryongcc",
+        loadSidebar: true,
+        // alias: {
+        //   '/.*/_sidebar.md': '/_sidebar.md'
+        // },
+        loadNavbar: false,
+        autoHeader: true,
+        subMaxLevel: 2,
+        coverpage: true,
+        copyCode: {
+          buttonText: "Copy",
+          errorText: "Error",
+          successText: "Copied",
+        },
+        plugins: [
+          function (hook, vm) {
+            hook.mounted(function () {
+              var div = Docsify.dom.create("div");
+              div.id = "gitalk-container";
+              var main = Docsify.dom.getNode("#main");
+              div.style = `width: ${main.clientWidth}px; margin: 0 auto 20px; padding-bottom: 60px`;
+              Docsify.dom.appendTo(Docsify.dom.find(".content"), div);
+            });
+            hook.doneEach(function () {
+              var el = document.getElementById("gitalk-container");
+              while (el.hasChildNodes()) el.removeChild(el.firstChild);
+              gitalk.render("gitalk-container");
+            });
+          },
+        ],
+        //routerMode: 'history'
+      };
+    </script>
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-typescript.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-jsx.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-tsx.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-graphql.min.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-S4XX0CNYVL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-S4XX0CNYVL");
+    </script>
+    <script src="//unpkg.com/docsify-copy-code@2"></script>
+    <script>
+      (function () {
+        var script = document.createElement("script");
+        script.src = "https://unpkg.com/web-vitals/dist/web-vitals.iife.js";
+        script.onload = function () {
+          // When loading `web-vitals` using a classic script, all the public
+          // methods can be found on the `webVitals` global namespace.
+          webVitals.getCLS(console.log);
+          webVitals.getFID(console.log);
+          webVitals.getLCP(console.log);
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+    <script
+      src="https://browser.sentry-cdn.com/6.9.0/bundle.min.js"
+      integrity="sha384-WO22OE751vRf/HrLRHFis3ipNR16hUk5Q0qW9ascPaSswHI9Q/0ZFMaMvJ0ZgmSI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://browser.sentry-cdn.com/6.9.0/bundle.tracing.min.js"
+      integrity="sha384-hcwf/DOgQM7GDBzmCIi4gLXiY9grOJ4KfCT416R7jM7Xo2lpRYwVxO2fK7HIDi5n"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+
+    <script>
+      Sentry.init({
+        dsn: "https://aeeefbc4cf934e31a4fd7982be37ddcc@o920355.ingest.sentry.io/5865932",
+        release: "doc.guryong.cc@1.0",
+        integrations: [new Sentry.Integrations.BrowserTracing()],
+        tracesSampleRate: 1.0,
+      });
+
+      Sentry.withScope(function (scope) {
+        scope.setTag("myTag", "send error");
+        scope.setLevel("warning");
+        // will be tagged with my-tag="my value"
+        Sentry.captureException(new Error("custom my error"));
+      });
+
+      var gitalk = new Gitalk({
+        clientID: "b3941da70e146af8c03b",
+        clientSecret: "c6eb6f79207c7e3b764ef06708221a5fd415ccb1",
+        repo: "guryongcc",
+        owner: "jl917",
+        admin: ["jl917"],
+        // id: location.pathname,      // Ensure uniqueness and length less than 50
+        // distractionFreeMode: false,  // Facebook-like distraction free mode
+        title: location.href,
+      });
+
+      setTimeout(() => {
+        gitalk.render("gitalk-container");
+      }, 100);
+    </script>
+
+    <script>
+      var _hmt = _hmt || [];
+      (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?1451a0102ac31320fea3972e36f3cb9d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+  </body>
 </html>
