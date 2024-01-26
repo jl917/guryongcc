@@ -15,3 +15,4 @@
 * [svelte](svelte/01.md)
 * [Option](option/01.md)
 * [Plugins](plugins/01.md)
+* [Plugins](leetcode/26.md)
