@@ -28,5 +28,5 @@
     * [_정리__--术语](javascript/basic/92.md)
   - [Algorithms](javascript/algorithms/01.md)
   - [Data Structures](javascript/structures/01.md)
-  - [Design Pattern](javascript/patten/creational/01.md)
+  - [Design Pattern](javascript/pattern/creational/01.md)
   - [术语](javascript/term.md)

@@ -1,0 +1,28 @@
+
+- Design pattern(设计模式)
+  * *creational*
+  * [抽象工厂模式(Abstract Factory)](javascript/pattern/creational/01.md)
+  * [构建者模式(Builder)](javascript/pattern/creational/02.md)
+  * [工厂方法模式(Factory Method)](javascript/pattern/creational/03.md)
+  * [原型模式(Prototype)](javascript/pattern/creational/04.md)
+  * [单例模式(Singleton)](javascript/pattern/creational/05.md)
+  * *structural*
+  * [适配器模式(Adapter)](javascript/pattern/structural/06.md)
+  * [桥接模式(Bridge)](javascript/pattern/structural/07.md)
+  * [__组合模式(Composite)](javascript/pattern/structural/08.md)
+  * [装饰者模式(Decorator)](javascript/pattern/structural/09.md)
+  * [外观模式(Facade)](javascript/pattern/structural/10.md)
+  * [享元模式(Flyweight)](javascript/pattern/structural/11.md)
+  * [代理模式(Proxy)](javascript/pattern/structural/12.md)
+  * *behavioral*
+  * [职责链模式(Chain of Responsibility)](javascript/pattern/behavioral/13.md)
+  * [命令模式(Command)](javascript/pattern/behavioral/14.md)
+  * [__解释器模式(Interpreter)](javascript/pattern/behavioral/15.md)
+  * [__迭代器模式(Iterator)](javascript/pattern/behavioral/16.md)
+  * [中介者模式(Mediator)](javascript/pattern/behavioral/17.md)
+  * [__备忘录模式(Memento)](javascript/pattern/behavioral/18.md)
+  * [观察者模式(Observer)](javascript/pattern/behavioral/19.md)
+  * [状态模式(State)](javascript/pattern/behavioral/20.md)
+  * [策略模式(Strategy)](javascript/pattern/behavioral/21.md)
+  * [__模板方法模式(Template Method)](javascript/pattern/behavioral/22.md)
+  * [__访问者模式(Visitor)](javascript/pattern/behavioral/23.md)
